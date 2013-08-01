@@ -30,3 +30,19 @@ It also means that:
 - Missing features won't be implemented. Ever.
 
 [jquery-terminal]: http://terminal.jcubic.pl/
+
+Compatibility
+-------------
+
+### jQuery Terminal Emulator
+
+Latest known compatible version: 0.6.3
+
+### Web Browser
+
+Currently, it should be able to run on:
+- Chrome
+- Firefox
+- Safari
+- Opera
+- Internet Explorer 9+
