@@ -10,7 +10,7 @@ InputArgument = function(name, mode, description, defaultValue) {
 
     this._name = name;
     this._mode = mode;
-    this._description = description;
+    this._description = (undefined === description || null === description ? '' : description);
 
     this.setDefault(defaultValue);
 };

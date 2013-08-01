@@ -40,7 +40,7 @@ InputOption = function(name, shortcut, mode, description, defaultValue) {
     this._name = name;
     this._shortcut = shortcut;
     this._mode = mode;
-    this._description = description;
+    this._description = (undefined === description || null === description ? '' : description);
 
     if (this.isArray() && !this.acceptValue()) {
         throw new Error('Impossible to have an option mode OPTION_VALUE_IS_ARRAY if the option does not accept a value.');
