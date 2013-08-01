@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery.terminal.css">
+</head>
+<body>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.terminal-0.6.3.min.js"></script>
+    <script type="text/javascript" src="js/console.min.js"></script>
+    <script type="text/javascript" src="js/helloworld-command.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $(function () {
+                var application = new Application('Hello World Sample', '1.0');
+                application.addCommand(new HelloWorldCommand());
+
+                $('body').terminal(function (command, term) {
+                    var input = new StringInput(command);
+                    var output = new JqueryTerminalOutput(term);
+                    application.run(input, output);
+                }, {
+                    greetings: 'Console.js Hello World Sample',
+                    onBlur: function () {
+                        return false;
+                    }
+                });
+            })
+        })(jQuery);
+    </script>
+</body>
+</html>
