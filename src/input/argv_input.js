@@ -1,4 +1,4 @@
-ArgvInput = function(argv, definition) {
+function ArgvInput(argv, definition) {
     argv = typeof argv === 'undefined' ? null : argv;
     definition = typeof definition === 'undefined' ? null : definition;
 
@@ -6,13 +6,13 @@ ArgvInput = function(argv, definition) {
         throw new Error('argv parameter must an array.');
     };
 
+    Input.call(this, definition);
+
     this._parsed = null;
     this._tokens = argv;
-
-    Input.call(this, definition)
 };
 
-extend_proto(Input, ArgvInput);
+ArgvInput.prototype = Object.create(Input.prototype);
 
 ArgvInput.prototype.setTokens = function(tokens) {
     this._tokens = tokens;

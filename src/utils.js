@@ -1,16 +1,3 @@
-// This is a constructor that is used to setup inheritance without
-// invoking the base's constructor.
-function surrogateCtor() {};
-
-function extend_proto(base, sub) {
-    // Copy the prototype from the base to setup inheritance
-    surrogateCtor.prototype = base.prototype;
-    // Tricky huh?
-    sub.prototype = new surrogateCtor();
-    // Remember the constructor property was set wrong, let's fix it
-    sub.prototype.constructor = sub;
-};
-
 function merge(set1, set2) {
     for (var key in set2) {
         if (set2.hasOwnProperty(key)) {

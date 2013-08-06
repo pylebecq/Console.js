@@ -1,4 +1,4 @@
-OutputFormatterStyleStack = function(emptyStyle) {
+function OutputFormatterStyleStack(emptyStyle) {
     this._emptyStyle = typeof emptyStyle === 'undefined' ? new OutputFormatterStyle() : emptyStyle;
     this.reset();
 };

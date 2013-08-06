@@ -1,8 +1,8 @@
-ListCommand = function() {
+function ListCommand() {
     Command.call(this, 'list');
 };
 
-extend_proto(Command, ListCommand);
+ListCommand.prototype = Object.create(Command.prototype);
 
 ListCommand.prototype.configure = function() {
     this

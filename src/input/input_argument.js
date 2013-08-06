@@ -2,7 +2,7 @@ var ARGUMENT_REQUIRED = 1;
 var ARGUMENT_OPTIONAL = 2;
 var ARGUMENT_IS_ARRAY = 4;
 
-InputArgument = function(name, mode, description, defaultValue) {
+function InputArgument(name, mode, description, defaultValue) {
     mode = typeof mode === 'undefined' ? ARGUMENT_OPTIONAL : parseInt(mode);
     if (isNaN(mode) || mode > 7 || mode < 1) {
         throw new Error('Argument mode "'+mode+'" is not valid.');

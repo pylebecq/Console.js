@@ -1,4 +1,4 @@
-OutputFormatterStyle = function(foreground, background, options) {
+function OutputFormatterStyle(foreground, background, options) {
     this._availableForegroundColors = {
         black: 30,
         red: 31,

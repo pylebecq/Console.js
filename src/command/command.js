@@ -1,4 +1,4 @@
-Command = function(name) {
+function Command(name) {
     this._application = null;
     this._name = null;
     this._aliases = [];

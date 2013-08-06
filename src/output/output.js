@@ -2,7 +2,7 @@ var OUTPUT_VERBOSITY_QUIET   = 0;
 var OUTPUT_VERBOSITY_NORMAL  = 1;
 var OUTPUT_VERBOSITY_VERBOSE = 2;
 
-Output = function(verbosity, decorated, formatter) {
+function Output(verbosity, decorated, formatter) {
     this.VERBOSITY_QUIET   = 0;
     this.VERBOSITY_NORMAL  = 1;
     this.VERBOSITY_VERBOSE = 2;

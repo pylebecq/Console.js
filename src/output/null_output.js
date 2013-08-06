@@ -1,7 +1,6 @@
-NullOutput = function() {
-};
+function NullOutput() {};
 
-extend_proto(Output, NullOutput);
+NullOutput.prototype = Object.create(Output.prototype);
 
 NullOutput.prototype.doWrite = function(message, newline) {
     return;

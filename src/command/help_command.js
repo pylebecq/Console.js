@@ -1,10 +1,10 @@
-HelpCommand = function() {
-    this._command = null;
-
+function HelpCommand() {
     Command.call(this, 'help');
+
+    this._command = null;
 };
 
-extend_proto(Command, HelpCommand);
+HelpCommand.prototype = Object.create(Command.prototype);
 
 HelpCommand.prototype.configure = function() {
     this.ignoreValidationErrors();

@@ -1,4 +1,4 @@
-InputDefinition = function(definition) {
+function InputDefinition(definition) {
     this._arguments = {};
     this._requiredCount = null;
     this._hasAnArrayArgument = false;

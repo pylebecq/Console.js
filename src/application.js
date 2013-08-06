@@ -1,4 +1,4 @@
-Application = function(name, version) {
+function Application(name, version) {
     this._name = typeof name === 'undefined' ? 'UNKNOWN' : name;
     this._version = typeof version === 'undefined' ? 'UNKNOWN' : version;
     this._commands = {};

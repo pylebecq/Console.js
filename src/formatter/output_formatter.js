@@ -1,4 +1,4 @@
-OutputFormatter = function(decorated, styles) {
+function OutputFormatter(decorated, styles) {
     this.FORMAT_PATTERN = new XRegExp('(\\\\?)<(/?)([a-z][a-z0-9_=;-]+)?>((?: [^<\\\\]+ | (?!<(?:/?[a-z]|/>)). | \\\\<. )*)', 'gisx');
 
     styles = typeof styles === 'undefined' ? [] : styles;

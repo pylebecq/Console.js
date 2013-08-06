@@ -1,4 +1,4 @@
-Input = function(definition) {
+function Input(definition) {
     definition = typeof definition === 'undefined' ? null : definition;
 
     this._interactive = true;

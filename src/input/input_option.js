@@ -3,7 +3,7 @@ var OPTION_VALUE_REQUIRED = 2;
 var OPTION_VALUE_OPTIONAL = 4;
 var OPTION_VALUE_IS_ARRAY = 8;
 
-InputOption = function(name, shortcut, mode, description, defaultValue) {
+function InputOption(name, shortcut, mode, description, defaultValue) {
     this._shortcut = null;
     this._mode = null;
     this._default = null;

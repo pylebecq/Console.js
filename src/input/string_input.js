@@ -1,11 +1,11 @@
-StringInput = function(input, definition) {
+function StringInput(input, definition) {
     definition = typeof definition === 'undefined' ? null : definition;
+
+    ArgvInput.call(this, [], null);
 
     //this.REGEX_STRING = '([^ ]+?)(?: |(?<!\\\\)"|(?<!\\\\)\'|$)';
     this.REGEX_STRING = '([^ ]+?)(?: |(?=")\\\\|(?=\')\\\\|$)';
     this.REGEX_QUOTED_STRING = '(?:"([^"\\\\]*(?:\\\\.[^"\\\\]*)*)"|\'([^\'\\\\]*(?:\\\\.[^\'\\\\]*)*)\')';
-
-    ArgvInput.call(this, [], null);
 
     this.setTokens(this.tokenize(input));
 
@@ -14,7 +14,7 @@ StringInput = function(input, definition) {
     };
 };
 
-extend_proto(ArgvInput, StringInput);
+StringInput.prototype = Object.create(ArgvInput.prototype);
 
 StringInput.prototype.tokenize = function(input) {
     input = input.replace(/(\r\n|\r|\n|\t)/g, ' ');
